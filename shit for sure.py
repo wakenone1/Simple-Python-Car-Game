@@ -36,9 +36,7 @@ Quit Game : Quit""")
         while speed < 280:
             speed = speed + 1
             print(f"{speed}mph")
-        else:
-            print("IT'S THE MAX SPEED!!!!")
-            
+        
     elif user_input.lower() == "slower":       
         if speed > 0:
             speed = speed - 10
