@@ -27,8 +27,8 @@ Quit Game : Quit""")
             engine_running = False
             print("Car already stopped", f"{speed}mph")
     elif user_input.lower() == "faster":
-        speed = speed + 10
         if speed < 280:
+            speed = speed + 10
             print("10 units increased!", f"{speed}mph")
         else:
             print("IT'S THE MAX SPEED!!!")
@@ -48,7 +48,7 @@ Quit Game : Quit""")
     elif user_input.lower() == "doom stop":
         while speed > 0:
             speed = speed - 1
-            print(f"{speed}mphs")
+            print(f"{speed}mph")
     elif user_input.lower() == "quit":
         print("Thanks for playing!")
         break
