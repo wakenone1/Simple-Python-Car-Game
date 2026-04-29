@@ -28,21 +28,26 @@ Quit Game : Quit""")
             print("Car already stopped", f"{speed}mph")
     elif user_input.lower() == "faster":
         speed = speed + 10
-        print("10 units increased!", f"{speed}mph")
+        if speed < 280:
+            print("10 units increased!", f"{speed}mph")
+        else:
+            print("IT'S THE MAX SPEED!!!")
     elif user_input.lower() == "max throttle":
         while speed < 280:
             speed = speed + 1
             print(f"{speed}mph")
+        else:
+            print("IT'S THE MAX SPEED!!!!")
             
-    elif user_input.lower() == "slower":
-        speed = speed - 10
-        print("10 units decreased!", f"{speed}mph")
-        if speed < 0:
+    elif user_input.lower() == "slower":       
+        if speed > 0:
+            speed = speed - 10
+            print("10 units decreased!", f"{speed}mph")
+        else:
             print("Your car stopped. You can't go slower than that. DUH!!!")
-            break
     elif user_input.lower() == "doom stop":
         while speed > 0:
-            speed = speed - 2
+            speed = speed - 1
             print(f"{speed}mphs")
     elif user_input.lower() == "quit":
         print("Thanks for playing!")
